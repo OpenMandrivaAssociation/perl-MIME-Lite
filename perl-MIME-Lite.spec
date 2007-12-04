@@ -1,6 +1,6 @@
 %define module  MIME-Lite
 %define name    perl-%{module}
-%define version 3.020
+%define version 3.021
 %define release %mkrel 1
 
 Name:           %{name}
@@ -14,6 +14,7 @@ Source:         http://www.cpan.org/modules/by-module/MIME/%{module}-%{version}.
 BuildRequires:  perl(Email::Date)
 BuildRequires:  perl(MIME::Types)
 BuildRequires:  perl(Mail::Address)
+BuildRequires:  perl(Email::Date::Format)
 BuildRequires:  sendmail-command
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
