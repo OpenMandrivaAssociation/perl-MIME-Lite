@@ -17,7 +17,6 @@ BuildRequires:  perl(Mail::Address)
 BuildRequires:  perl(Email::Date::Format)
 BuildRequires:  sendmail-command
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 MIME::Lite is intended as a simple, standalone module for generating
