@@ -1,23 +1,24 @@
-%define module  MIME-Lite
-%define name    perl-%{module}
-%define version 3.024
-%define release %mkrel 1
+%define upstream_name    MIME-Lite
+%define upstream_version 3.025
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Low-calorie MIME generator 
-License:        GPL or Artistic
-Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/MIME/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Low-calorie MIME generator 
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/MIME/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(Email::Date)
 BuildRequires:  perl(MIME::Types)
 BuildRequires:  perl(Mail::Address)
 BuildRequires:  perl(Email::Date::Format)
 BuildRequires:  sendmail-command
+
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 MIME::Lite is intended as a simple, standalone module for generating
@@ -27,7 +28,7 @@ attachments. It does not require that you have the Mail:: or MIME::
 modules installed. 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 chmod 644 README changes.pod lib/MIME/* examples/*
@@ -50,4 +51,3 @@ rm -f %{buildroot}%{perl_vendorlib}/MIME/changes.pod
 %doc COPYING INSTALLING README changes.pod
 %{perl_vendorlib}/MIME
 %{_mandir}/*/*
-
