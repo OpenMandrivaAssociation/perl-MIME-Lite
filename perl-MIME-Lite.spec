@@ -1,5 +1,5 @@
 %define upstream_name    MIME-Lite
-%define upstream_version 3.025
+%define upstream_version 3.026
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
