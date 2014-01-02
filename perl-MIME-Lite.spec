@@ -1,14 +1,14 @@
 %define modname	MIME-Lite
-%define modver	3.027
+%define modver 3.029
 
 Summary:	Low-calorie MIME generator 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/MIME/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/MIME/MIME-Lite-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Email::Date)
 BuildRequires:	perl(MIME::Types)
@@ -43,4 +43,5 @@ rm -f %{buildroot}%{perl_vendorlib}/MIME/changes.pod
 %doc COPYING INSTALLING README changes.pod
 %{perl_vendorlib}/MIME
 %{_mandir}/man3/*
+
 
