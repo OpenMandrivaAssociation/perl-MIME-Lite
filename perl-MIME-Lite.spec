@@ -1,5 +1,5 @@
 %define modname	MIME-Lite
-%define modver 3.029
+%define modver 3.030
 
 Summary:	Low-calorie MIME generator 
 Name:		perl-%{modname}
@@ -43,5 +43,6 @@ rm -f %{buildroot}%{perl_vendorlib}/MIME/changes.pod
 %doc COPYING INSTALLING README changes.pod
 %{perl_vendorlib}/MIME
 %{_mandir}/man3/*
+
 
 
