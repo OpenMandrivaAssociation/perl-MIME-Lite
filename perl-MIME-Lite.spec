@@ -4,7 +4,7 @@
 Summary:	Low-calorie MIME generator 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -14,6 +14,7 @@ BuildRequires:	perl(Email::Date)
 BuildRequires:	perl(MIME::Types)
 BuildRequires:	perl(Mail::Address)
 BuildRequires:	perl(Email::Date::Format)
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	sendmail-command
 
