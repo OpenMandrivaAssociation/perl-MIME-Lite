@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/MIME/MIME-Lite-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Email::Date)
 BuildRequires:	perl(MIME::Types)
 BuildRequires:	perl(Mail::Address)
