@@ -1,14 +1,12 @@
 %define modname	MIME-Lite
-%define modver 3.030
-
 Summary:	Low-calorie MIME generator 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	2
+Version:	3.030
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/MIME/MIME-Lite-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/MIME/MIME-Lite-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Email::Date)
@@ -27,7 +25,7 @@ attachments. It does not require that you have the Mail::	or MIME::
 modules installed. 
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 chmod 644 README changes.pod lib/MIME/* examples/*
