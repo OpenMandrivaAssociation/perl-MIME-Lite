@@ -28,7 +28,7 @@ modules installed.
 %setup -qn %{modname}-%{version} -n MIME-Lite-3.038
 
 %build
-chmod 644 README changes.pod lib/MIME/* examples/*
+chmod -f 644 README lib/MIME/* examples/* || :
 %__perl Makefile.PL INSTALLDIRS=vendor </dev/null
 %make
 
@@ -40,7 +40,7 @@ make test
 rm -f %{buildroot}%{perl_vendorlib}/MIME/changes.pod
 
 %files
-%doc COPYING INSTALLING README changes.pod
+%doc COPYING INSTALLING README
 %{perl_vendorlib}/MIME
 %{_mandir}/man3/*
 
